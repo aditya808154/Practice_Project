@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CSS and Icons CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+       
+
+        .nav {
+            display: flex;
+            align-items: center;
+            margin: 5px;
+            padding: 5px;
+            background-color: whitesmoke;
+        }
+
+        .img{
+            border: 3px solid brown;
+            filter: blur(0.7px);
+        }
+        .anchar {
+            display: flex;
+            gap: 30px;
+            justify-content: flex-end;
+            margin-right: 20px;
+        }
+
+        .anchar a {
+            text-decoration: none;
+            color: black;
+            margin-left:50px ;
+        }
+
+        button {
+            background-color: orangered;
+            color: white;
+            width: 100px;
+            height: 30px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: rgb(211, 96, 54);
+            color: black;
+        }
+
+        input {
+            width: 150px;
+            height: 25px;
+            border-radius: 5px;
+        }
+
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .box1, .box2 {
+            flex: 1;
+            margin: 10px;
+            border-radius: 5px;
+            min-width: 300px;
+        }
+
+        .box1 {
+            height: 500px;
+            background-image: url('https://edelinfotech.com/wp-content/uploads/2022/06/1_KlNlGjWBb0mScNgnX9Uxjw.gif');
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+           
+        }
+
+        .boxc {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-top: 150px;
+        }
+
+        h1 {
+            color: rgb(15, 145, 185);
+            font-weight: bold;
+            font-family: arial,helvetica;
+            
+        }
+
+        h1:hover {
+            color: rgb(55, 22, 221);
+            font-weight: 800;
+        }
+
+        h3{
+            color: bisque;
+            font-weight: 700;
+
+        }
+        h3:hover{
+            color: chartreuse;
+            font-weight: 900;
+        }
+        .box2 {
+            text-align: center;
+            padding-top: 50px;
+            background-image: url('https://i.pinimg.com/originals/4c/33/ef/4c33ef1f0c28efb56b49fb948d86ec49.gif');
+            background-size: cover;
+            color: white;
+        }
+
+        .boxd {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .conntent {
+            width: 250px;
+            height: 35px;
+            border: 2px solid white;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        .button1, .button2 {
+            width: 250px;
+            height: 35px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button1 {
+            background-color: rgb(76, 13, 236);
+            border: 2px solid blue;
+            color: white;
+        }
+
+        .button1:hover {
+            background-color: rgb(133, 133, 224);
+        }
+
+        .button2 {
+            background-color: green;
+            border: 2px solid green;
+            color: white;
+        }
+
+        .button2:hover {
+            background-color: rgb(7, 169, 7);
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .footer-links a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .anchar {
+                flex-direction: column;
+                margin-top: 10px;
+            }
+
+            .box1, .box2 {
+                height: auto;
+            }
+
+            .conntent, .button1, .button2 {
+                width: 200px;
+            }
+
+            .footer-links {
+                display: block;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="cantener">
+        <!-- Navigation Bar -->
+        <div class="nav">
+            <div class="img">
+                <img src="https://miro.medium.com/v2/resize:fit:1400/0*eCOgoCG9sTVrNG3G.gif" height="100px" width="120px" alt="">
+            </div>
+            <div class="anchar">
+                <a href="#"><i class="bi bi-house-door-fill"></i> Home</a>
+                <a href="#"><i class="bi bi-info-circle-fill"></i> About</a>
+                <a href="#"><i class="bi bi-question-circle-fill"></i> Help</a>
+                <a href="#"><i class="bi bi-telephone-fill"></i> Contact</a>
+                <span>
+                    <input type="text" name="text" id="text" placeholder="Search here">
+                    <button type="submit"><i class="bi bi-search"></i> Search</button>
+                </span>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main">
+            <div class="box1">
+                <div class="boxc">
+                    <h1>JAVA Developer</h1>
+                    <h3>Java Full Stack Developer</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, dolorem?</p>
+                </div>
+            </div>
+            <div class="box2">
+                <div class="boxd">
+                    <img src="https://www.kindpng.com/picc/m/699-6997452_administrator-network-icons-system-avatar-computer-transparent-admin.png" height="100px" alt="">
+                    <h1 class="hi">Login ID</h1>
+                    <input type="text" name="text" id="text" placeholder="Full Name" required class="conntent">
+                    <br>
+                    <input type="email" name="email" id="email" placeholder="Enter Email" class="conntent">
+                    <br>
+                    <input type="password" name="password" id="password" placeholder="Password" class="conntent">
+                    <br>
+                    <button type="submit" class="button1">Login</button>
+                    <br>
+                    <button type="submit" class="button2">Create new account</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <footer>
+            <div class="footer-links">
+                <a href="#"><i class="bi bi-facebook"></i> Facebook</a>
+                <a href="#"><i class="bi bi-twitter"></i> Twitter</a>
+                <a href="#"><i class="bi bi-instagram"></i> Instagram</a>
+                <a href="#"><i class="bi bi-linkedin"></i> LinkedIn</a>
+            </div>
+            <p>&copy; 2024 Java Developer Inc. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Bootstrap JS for responsive behavior -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

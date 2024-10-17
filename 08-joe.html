@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #fff;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;/* space*/
+            align-items: center;
+            padding: 30px;
+            bottom: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+           
+        .div1 h1{
+            font-size: 30px;
+            color:wheat;
+            border-radius: 5px;
+            height: 50px;
+            width: 80px;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            background-color: rgb(85, 85, 170);
+        }
+        
+        nav ul{
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            color:rgb(31, 31, 86) ;
+        }
+        
+        header a{
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .cte{
+            padding: 10px 20px;
+            background-color: #7e3af2;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+
+        }
+        .cte:hover{
+            background-color: transparent;
+            color: #333;
+            border: 2px solid #7e3af2 ;
+        }
+        main{
+            display: flex;
+            align-items: center;
+            height: 70vh;
+            background-image: url('https://img.freepik.com/premium-photo/furniture-office-background-dark_87720-269186.jpg') ;
+            background-size: 1700px 600px;
+            background-repeat: no-repeat;
+        }
+        .intro{
+            padding-left: 50px;
+        }
+        .intro h2{
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: aliceblue;
+        }
+        .intro h2 span{
+           color: rgb(124, 124, 239);
+           font-weight: bold;
+        }
+        .intro h2 span:hover{
+            color: chartreuse;
+        }
+        .intro h4{
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: white;
+        }
+        .intro p{
+            max-width: 600px;
+            margin: 0 auto 20px auto;
+            font-size: 16px;
+            color:white;
+            font-weight: 100px;
+        }
+        
+        .buttons{
+            display: flex;
+            gap: 20px;
+            
+        }
+        .btn-primary,.btn-secondary{
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .btn-primary{
+            background-color:#7e3af2 ;
+            color: white;
+        }
+        .btn-primary:hover{
+            background-color: transparent;
+            color: #333;
+        }
+        .btn-secondary{
+            background-color: transparent;
+            color: #faf5f5;
+            border: 2px solid #7e3af2 ;
+        }
+        .btn-secondary:hover{
+            background-color:#7e3af2 ;
+            color: rgb(19, 19, 19);
+        }
+        footer{
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            margin: 10px;
+            padding-left: 50px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="div1"><h1>Joe</h1></div>
+        <nav>
+            <ul>
+                <li><h3>Home</h3></li>
+                <li><h3>About</h3></li>
+                <li><h3>Portfolio</h3></li>
+                <li><h3>Blog</h3></li>
+                <li><h3>Contact</h3></li>
+            </ul>
+        </nav>
+        <a href="#" class="cte">Let's Talk</a>
+    </header>
+
+
+    <main>
+        <section class="intro">
+            <h2>Hi, I'm <span>aditya</span></h2>
+            <h4>Java Full Stack Developer</h4>
+            <p><b>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, consequatur omnis quaerat quasi sequi illo assumenda dolore debitis doloremque nihil quod, commodi et? Praesentium ratione ipsum quaerat ducimus est quas?</b></p>
+            <div class="buttons">
+                <a href="#" class="btn-primary">Hire Me</a>
+                <a href="#" class="btn-secondary">See Projects</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <marquee>
+        <h2>Email:nprajapati787@gmail.com</h2>
+        <h3>Address:Delhi,256355,INDIA</h3>
+        <h3>Mob.no:-8081545412</h3>
+        </marquee>
+    </footer>
+</body>
+</html>

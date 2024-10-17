@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+       
+        .nav{
+            display: flex;
+            align-items: center;
+            margin: 5px;
+            padding: 5px;
+            background-color: whitesmoke;
+            
+        }
+        .anchar{
+            display: flex;
+            margin-bottom:150px;
+            padding: 20px;
+            justify-content: top;
+            gap: 30px;
+            padding-left: 700px;
+            
+        }
+        
+           
+
+        
+        .anchar a{
+            text-decoration: none;
+        }
+        
+        button{
+            background-color: orangered;
+            color: white;
+            width: 100px;
+            height: 30px;
+            border-radius: 5px;
+            
+        }
+        button:hover{
+            background-color: rgb(211, 96, 54);
+            color: black;
+        }
+        input{
+            width: 150px;
+            height: 25px;
+            border-radius: 5px; 
+        }
+        
+
+        .main{
+            height: 900px;
+            width:1500px;
+            display: flex;
+            
+        } 
+      
+        .box1{
+            height:870px ;
+            width: 750px;
+            margin: 10px;
+            border: 2px solid black;
+            background-image: url('https://cdn.dribbble.com/users/2131993/screenshots/4948736/thoughtworks-gif_dribbble.gif');
+            background-repeat: no-repeat;
+            background-size: 1200px;
+           
+        }
+        .boxc{
+            justify-content: center;
+            align-items: center;
+            padding-top: 200px;
+            margin: 10px;
+            color: aliceblue;
+            text-decoration: none;
+            
+
+        }
+        h1{
+            color: rgb(15, 145, 185);
+            text-decoration: chartreuse;
+        }
+        h1:hover{
+            color: rgb(55, 22, 221);
+        }
+        h3{
+            color:gray;
+        }
+        h3:hover{
+            color: yellow;
+        }
+        p{
+            color: rgb(231, 233, 227);
+        }
+        p:hover{
+            color: black;
+            
+        }
+        .box2{
+            height:720px ;
+            width: 750px;
+            margin: 10px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-left:250px ;
+            padding-top: 150px;
+            background-image: url('https://i.pinimg.com/originals/4c/33/ef/4c33ef1f0c28efb56b49fb948d86ec49.gif');
+            background-repeat: no-repeat;
+            background-size: 1200px;
+        }
+        .boxd{
+            
+            height: 300px;
+            width: 300px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            margin: 20px;
+            padding-top: 100px;
+            border: 5px;
+            
+        }
+        .boxd img{
+            border-radius: 8cqw;
+        }
+        .hi{
+            color: aqua;
+        }
+        .conntent{
+            height: 35px;
+            width: 300px;
+            border: 2px solid white;
+           
+
+        }
+
+        .button1{
+            background-color: rgb(76, 13, 236);
+            color: white;
+            height: 35px;
+            width: 300px;
+            cursor: pointer;
+            border: 2px solid blue;
+        }
+        .button1:hover{
+            background-color: rgb(133, 133, 224);
+            color: beige;
+        }
+        .button2{
+            background-color: green;
+            color: white;
+            height: 35px;
+            width: 300px;
+            cursor: pointer;
+            border: 2px solid green;
+        }
+        .button2:hover{
+            background-color: rgb(7, 169, 7);
+            color: azure;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div class="cantener">
+        <div class="nav">
+           
+            <div class="img">
+
+                <img src="https://miro.medium.com/v2/resize:fit:1400/0*eCOgoCG9sTVrNG3G.gif" height="150px" width="180px" alt="">
+            </div>
+            <div class="anchar">
+
+                <a href="#">Home</a>
+                <a href="#">About </a>
+                <a href="#">Helps</a>
+                <a href="#">Conteact</a>
+                <span><input type="text" name="text" id="text" placeholder="search hear">
+                <button type="submit">search</button></span>
+            </div>
+
+
+
+            
+        </div>
+        <div class="main">
+            <div class="box1">
+                <div class="boxc">
+                    <h1>JAVA Developer</h1>
+                    <br>
+                
+                    <h3>Java Full Stack Developer</h3>
+                    
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam ex quae quibusdam voluptates cupiditate quis eos illum earum ducimus voluptatibus provident voluptas saepe distinctio beatae, amet voluptatum pariatur ullam maiores.</p>
+
+                </div>
+            </div>
+            <div class="box2">
+                <div class="boxd">
+                    <img src="https://www.kindpng.com/picc/m/699-6997452_administrator-network-icons-system-avatar-computer-transparent-admin.png" height="100px" alt="">
+                    <h1 class="hi" >Login ID</h1>
+                    <input type="text" name="text" id="text" placeholder="Full Name" required class="conntent">
+                    <br>
+                    <br>
+                    <input type="email" name="email" id="email" placeholder="Enter Email" class="conntent">
+                    <br>
+                    <br>
+                    <input type="password" name="password" id="password" placeholder="Password" class="conntent">
+                    <br>
+                    <br>
+
+                    <button type="submit" class="button1">Login</button>
+                    <br>
+                    <br>
+                    <button type="submit" class="button2">Create new account</button>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
