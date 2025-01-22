@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="w1.css">
+    <link rel="stylesheet" href="w1.js">
+</head>
+<body>
+    <div class="card">
+        <div class="search">
+            <input type="text" placeholder="Enter city name" spellcheck="false">
+            <button><img src="https://www.freeiconspng.com/thumbs/search-icon-png/search-icon-png-21.png" alt="" height="50px"></button>
+        </div>
+
+        <div class="weather">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/008/854/797/small_2x/sunny-and-rainy-cloudy-day-weather-forecast-icon-meteorological-sign-3d-render-png.png" alt="" class="weather-icon">
+            <h1 class="temp">22°c</h1>
+            <h2 class="city">New Delhi</h2>
+            <div class="details">
+                <div class="col">
+                    <img src="https://cdn-icons-png.flaticon.com/512/4148/4148460.png" alt="">
+                    <div>
+                        <p class="humidity">50%</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="https://icons.veryicon.com/png/o/weather/weather-for-the-first-time/wind-14.png" alt="" >
+                    <div>
+                        <p class="wind">15 km/h</p>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let input = document.querySelector("input");
+    let button = document.querySelector("button");
+    let city = document.querySelector(".city");
+    let temp = document.querySelector(".temp");
+    let humidity = document.querySelector(".humidity");
+    let wind = document.querySelector(".wind");
+    let locationButton = document.querySelector(".location");
+    
+    async function checkWeather() {
+      const apiKey = "0e66525efbeb05305b1aa06f65ebc16b";
+      const apiUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=${input.value}&appid=${apiKey}`;
+      
+      try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+        console.log(data);
+    
+        if (data.cod === 200) {
+          city.innerHTML = data.name;
+          temp.innerHTML = `${data.main.temp}°C`;
+          humidity.innerHTML = `${data.main.humidity}%`;
+          wind.innerHTML = `${data.wind.speed} km/h`;
+        } else {
+          city.innerHTML = "City not found";
+          temp.innerHTML = "--";
+          humidity.innerHTML = "--";
+          wind.innerHTML = "--";
+        }
+      } catch (error) {
+        console.error("Error fetching weather data:", error);
+      }
+    }
+    
+    button.addEventListener("click", () => {
+      checkWeather();
+    });
+    
+    locationButton.addEventListener("click", () => {
+      navigator.geolocation.getCurrentPosition(async (position) => {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        const apiKey = "0e66525efbeb05305b1aa06f65ebc16b";
+        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
+    
+        try {
+          const response = await fetch(apiUrl);
+          const data = await response.json();
+          console.log(data);
+    
+          if (data.cod === 200) {
+            city.innerHTML = data.name;
+            temp.innerHTML = `${data.main.temp}°C`;
+            humidity.innerHTML = `${data.main.humidity}%`;
+            wind.innerHTML = `${data.wind.speed} km/h`;
+          } else {
+            city.innerHTML = "Location not found";
+            temp.innerHTML = "--";
+            humidity.innerHTML = "--";
+            wind.innerHTML = "--";
+          }
+        } catch (error) {
+          console.error("Error fetching weather data:", error);
+        }
+      }, (error) => {
+        console.error("Geolocation error:", error);
+      });
+    });
+    
+      </script>
+   
+</body>
+</html>

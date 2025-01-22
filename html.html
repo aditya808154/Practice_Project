@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delicious Apples</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #00d86c;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      max-width: 800px;
+    }
+
+    .image-section {
+      background-color: #bffcc6;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .image-section img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .thumbnails {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .thumbnails img {
+      width: 50px;
+      height: 50px;
+      margin: 0 5px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .details-section {
+      padding: 20px;
+      color: #333;
+      flex: 1;
+    }
+
+    .details-section h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .details-section .price {
+      font-size: 28px;
+      color: #ff5733;
+      margin-bottom: 15px;
+    }
+
+    .details-section .color-options {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .color-options span {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: inline-block;
+      border: 2px solid transparent;
+      cursor: pointer;
+    }
+
+    .color-green { background: #00b300; }
+    .color-yellow { background: #ffcc00; }
+    .color-red { background: #ff0000; }
+
+    .benefits {
+      margin-bottom: 15px;
+    }
+
+    .benefits li {
+      margin: 5px 0;
+    }
+
+    .add-to-cart {
+      background-color: #ff5733;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .add-to-cart:hover {
+      background-color: #e14b2e;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="image-section">
+      <img src="https://via.placeholder.com/200" alt="Green Apple">
+      <div class="thumbnails">
+        <img src="https://via.placeholder.com/50" alt="Thumbnail">
+        <img src="https://via.placeholder.com/50" alt="Thumbnail">
+        <img src="https://via.placeholder.com/50" alt="Thumbnail">
+      </div>
+    </div>
+    <div class="details-section">
+      <h1>Delicious Apples</h1>
+      <p class="price">R$ 7.93</p>
+      <div class="color-options">
+        <span class="color-green"></span>
+        <span class="color-yellow"></span>
+        <span class="color-red"></span>
+      </div>
+      <ul class="benefits">
+        <li>Apples are nutritious</li>
+        <li>Apples may be good for weight loss</li>
+        <li>Apples may be good for bone health</li>
+        <li>They're linked to a lower risk of diabetes</li>
+      </ul>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </div>
+</body>
+</html>
