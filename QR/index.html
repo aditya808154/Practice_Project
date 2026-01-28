@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Options</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+        body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #0f172a; color: white; display: flex; justify-content: center; padding: 20px; }
+        .container { max-width: 350px; width: 100%; text-align: center; background: #1e293b; padding: 30px; border-radius: 25px; box-shadow: 0 15px 35px rgba(0,0,0,0.4); }
+        
+        .profile-icon { width: 70px; height: 70px; background: #2563eb; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; font-size: 30px; border: 3px solid #3b82f6; }
+        
+        h2 { margin: 0 0 5px 0; font-size: 22px; }
+        p { color: #94a3b8; font-size: 14px; margin-bottom: 25px; }
+
+        /* Button Options */
+        .options-menu a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            margin-bottom: 12px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn-whatsapp { background: #22c55e; }
+        .btn-instagram { background: #e1306c; }
+        .btn-call { background: #2563eb; }
+        
+        .options-menu a:hover { transform: scale(1.03); opacity: 0.9; }
+
+        /* QR Code Styling */
+        .qr-box { background: white; padding: 15px; border-radius: 15px; display: inline-block; margin-top: 25px; }
+        .footer-text { margin-top: 15px; font-size: 12px; color: #64748b; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="profile-icon">👤</div>
+    <h2>Contact Menu</h2>
+    <p>Please choose an option to connect</p>
+
+    <div class="options-menu">
+        <a href="https://wa.me/918052646045" class="btn-whatsapp">🟢 WhatsApp Chat</a>
+        <a href="https://instagram.com/your_id" class="btn-instagram">📸 Instagram Profile</a>
+        <a href="tel:+918052646046" class="btn-call">📞 Direct Call</a>
+    </div>
+
+    <div class="qr-box">
+        <div id="qrcode"></div>
+    </div>
+    <div class="footer-text">Scan this QR to open this Menu</div>
+</div>
+
+<script>
+    // Ye code automatic aapke current page ka link QR bana dega
+    var pageUrl = window.location.href;
+    
+    // Agar aap local file chala rahe hain (file:///), to QR nahi chalega
+    // Isliye niche wala link tab kaam karega jab aap ise internet par dalenge
+    new QRCode(document.getElementById("qrcode"), {
+        text: pageUrl,
+        width: 150,
+        height: 150,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+:root{
+    --header-color:rgb(46, 40, 40);
+    --bcg-color:#f5f5f5;
+    --padding:20px;
+    --text-color:#fff;
+    --border-radius:5px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial,sans-serif;
+    background-color:var(--bcg-color);
+    width: 100vw;
+    background-image: url('https://img.freepik.com/premium-vector/room-with-bookcase-full-books-bookcase-with-bookcase-center_1090394-148753.jpg?semt=ais_hybrid&w=740');
+}
+header{
+    background-color: var(--header-color);
+    padding: var(--padding);
+    color: var(--text-color);
+}
+header h1{
+    font-size: 36px;
+
+}
+main{
+    min-height: 80vh;
+    padding: var(--padding);
+    max-width: 800px;
+    margin:0 auto ;
+}
+main form{
+    display: flex;
+    justify-content: center;
+
+}
+form input[type="text"], button[type="submit"],.result div a{
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    padding: calc(var(--padding)/2);
+
+}
+form input[type="text"]{
+    flex-grow: 1;
+}
+form button[type="submit"]{
+    background-color: var(--header-color);
+    color: var(--text-color);
+    margin-left: 10px;
+    cursor: pointer;
+}
+footer{
+    background-color: var(--header-color);
+    color: var(--text-color);
+    padding: var(--padding);
+    text-align: center;
+    font-size: 18px;
+    position: fixed;
+    width: 100%;
+}
+.result{
+    background-image: url('https://thumbs.dreamstime.com/b/old-book-flying-letters-magic-light-background-bookshelf-library-ancient-books-as-symbol-knowledge-history-218640948.jpg');
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+    margin-top: 20px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    color: #f5f5f5;
+}
+.result p{
+    margin-top: 10px;
+}
+.result p[class="partOfSpeech"]{
+    font-style:italic ;
+    font-size: 1.5rem;
+    color: #f6eeee;
+    margin-top: 2px;
+}
+.result div{
+    margin-top: 20px;
+}
+.result div a{
+    text-decoration: none;
+    background-color: var(--header-color);
+    color: var(--bcg-color);
+}
+.result li{
+    padding: calc(var(--padding)/6);
+    margin-right: 20px;
+}
+
+@media screen and (max-width:320px)  {
+    main form{
+        flex-direction: column;
+    }
+    form button[type="submit"]{
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
